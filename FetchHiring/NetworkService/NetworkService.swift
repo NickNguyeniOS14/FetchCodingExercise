@@ -7,7 +7,7 @@
 
 import Foundation
 
-class NetworkService {
+final class NetworkService {
 
     private lazy var urlRequest: URLRequest = {
         let baseURL = URL(string: "https://fetch-hiring.s3.amazonaws.com/hiring.json")!

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ItemTableViewController: UITableViewController {
+final class ItemTableViewController: UITableViewController {
 
     // MARK: - Properties
 
@@ -35,6 +35,7 @@ class ItemTableViewController: UITableViewController {
                 case .success(let items):
                     self.items = items.sorted(by: <)
                         .filter { $0.name != "" && $0.name != nil }
+
                     self.reloadDataOnMainThread()
                 case .failure(let error):
                     self.presentAlertOnMainThread(for: error)
