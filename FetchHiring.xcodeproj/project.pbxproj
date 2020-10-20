@@ -17,6 +17,9 @@
 		B678DCC8253E620B0064841B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B678DCC7253E620B0064841B /* NetworkService.swift */; };
 		B678DCE8253E64040064841B /* HTTPURLResponse+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B678DCE7253E64040064841B /* HTTPURLResponse+Ext.swift */; };
 		B678DCF8253E65730064841B /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B678DCF7253E65730064841B /* NetworkError.swift */; };
+		B678DCFB253E67BC0064841B /* UIAlertController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B678DCFA253E67BC0064841B /* UIAlertController+Ext.swift */; };
+		B678DCFE253E67EB0064841B /* UITableViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B678DCFD253E67EB0064841B /* UITableViewController+Ext.swift */; };
+		B678DD02253E78680064841B /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = B678DD01253E78680064841B /* Section.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		B678DCC7253E620B0064841B /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		B678DCE7253E64040064841B /* HTTPURLResponse+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+Ext.swift"; sourceTree = "<group>"; };
 		B678DCF7253E65730064841B /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		B678DCFA253E67BC0064841B /* UIAlertController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Ext.swift"; sourceTree = "<group>"; };
+		B678DCFD253E67EB0064841B /* UITableViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewController+Ext.swift"; sourceTree = "<group>"; };
+		B678DD01253E78680064841B /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,9 +71,9 @@
 			isa = PBXGroup;
 			children = (
 				B678DCB8253E46180064841B /* Application */,
-				B678DCE6253E63F20064841B /* Extension */,
 				B678DCC4253E60CB0064841B /* NetworkService */,
 				B678DCC0253E60100064841B /* Model */,
+				B678DCE6253E63F20064841B /* Extension */,
 				B678DCBD253E463D0064841B /* ViewControllers */,
 				B678DCBA253E46240064841B /* Storyboard */,
 				B678DCBB253E462C0064841B /* Resources */,
@@ -114,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				B678DCC1253E601E0064841B /* Item.swift */,
+				B678DD01253E78680064841B /* Section.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -131,6 +138,8 @@
 			isa = PBXGroup;
 			children = (
 				B678DCE7253E64040064841B /* HTTPURLResponse+Ext.swift */,
+				B678DCFA253E67BC0064841B /* UIAlertController+Ext.swift */,
+				B678DCFD253E67EB0064841B /* UITableViewController+Ext.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -208,7 +217,10 @@
 				B678DCC8253E620B0064841B /* NetworkService.swift in Sources */,
 				B678DCF8253E65730064841B /* NetworkError.swift in Sources */,
 				B678DCC2253E601E0064841B /* Item.swift in Sources */,
+				B678DCFE253E67EB0064841B /* UITableViewController+Ext.swift in Sources */,
 				B678DCE8253E64040064841B /* HTTPURLResponse+Ext.swift in Sources */,
+				B678DD02253E78680064841B /* Section.swift in Sources */,
+				B678DCFB253E67BC0064841B /* UIAlertController+Ext.swift in Sources */,
 				B678DCA8253E45420064841B /* ItemTableViewController.swift in Sources */,
 				B678DCA4253E45420064841B /* AppDelegate.swift in Sources */,
 				B678DCA6253E45420064841B /* SceneDelegate.swift in Sources */,

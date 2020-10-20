@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 class NetworkService {
 
     private lazy var urlRequest: URLRequest = {
@@ -29,7 +28,7 @@ class NetworkService {
                 completion(.failure(.badResponse))
                 return
             }
-
+        
             guard let data = data else {
                 completion(.failure(.noData))
                 return
@@ -42,5 +41,4 @@ class NetworkService {
             }
         }.resume()
     }
-
 }

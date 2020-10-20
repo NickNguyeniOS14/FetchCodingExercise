@@ -27,10 +27,15 @@ extension Item: Decodable {
         let group = try container.decode(Int.self, forKey: .group)
         let name = try container.decodeIfPresent(String.self, forKey: .name)
 
-        guard name != "" else { throw NSError(domain: "name is empty", code: 404, userInfo: nil) }
-
         self.id = id
         self.group = group
         self.name = name
+
+    }
+}
+
+extension Item: Comparable {
+    static func < (lhs: Item, rhs: Item) -> Bool {
+        lhs.id < rhs.id
     }
 }
