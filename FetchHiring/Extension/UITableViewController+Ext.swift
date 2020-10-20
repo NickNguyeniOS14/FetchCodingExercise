@@ -8,7 +8,7 @@
 import UIKit
 
 extension UITableViewController {
-    func presentErrorAlertOnMainThread(for error: NetworkError) {
+    func presentAlertOnMainThread(for error: NetworkError) {
         DispatchQueue.main.async {
             let alert = UIAlertController(localizedError: error)
             self.present(alert, animated: true, completion: nil)

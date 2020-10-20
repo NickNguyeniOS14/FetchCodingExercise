@@ -11,13 +11,13 @@ class ItemTableViewController: UITableViewController {
 
     // MARK: - Properties
 
-    var networkService =  NetworkService()
+    private let networkService =  NetworkService()
 
-    var items: [Item] = []
+    private var items: [Item] = []
 
     private let reuseCellID = "ItemCell"
 
-    var sectionData: [Section] = [.one,.two,.three,.four]
+    private let sectionData: [Section] = [.one,.two,.three,.four]
 
     // MARK: - View Life Cycle
 
@@ -37,7 +37,7 @@ class ItemTableViewController: UITableViewController {
                         .filter { $0.name != "" && $0.name != nil }
                     self.reloadDataOnMainThread()
                 case .failure(let error):
-                    self.presentErrorAlertOnMainThread(for: error)
+                    self.presentAlertOnMainThread(for: error)
             }
         })
     }
