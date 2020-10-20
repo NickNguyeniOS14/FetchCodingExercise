@@ -60,17 +60,15 @@ class ItemTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         var titleForSection = ""
-        switch section {
-            case 0:
+        switch sectionData[section] {
+            case .one:
                 titleForSection = "Group 1"
-            case 1:
+            case .two:
                 titleForSection = "Group 2"
-            case 2:
+            case .three:
                 titleForSection = "Group 3"
-            case 3:
+            case .four:
                 titleForSection = "Group 4"
-            default:
-                break
         }
         return titleForSection
     }
