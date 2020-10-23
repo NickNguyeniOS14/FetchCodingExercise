@@ -76,49 +76,17 @@ final class ItemTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let section = sectionData[section]
-        var numberOfRows = 0
-
-        switch section {
-            case .one:
-                numberOfRows = items.filter { $0.group == 1}.count
-
-            case .two:
-                numberOfRows = items.filter { $0.group == 2}.count
-
-            case .three:
-                numberOfRows = items.filter { $0.group == 3}.count
-
-            case .four:
-                numberOfRows = items.filter { $0.group == 4}.count
-
-        }
-        return numberOfRows
+        let numberOfRows = generateFilteredItems(for: section)
+        return numberOfRows.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseCellID, for: indexPath)
-        
         let section = sectionData[indexPath.section]
-        
-        switch section {
-            case .one:
-                let groupedItems = generateFilteredItems(for: section)
-                let item = groupedItems[indexPath.row]
-                configureUIFor(item, at: cell)
-            case .two:
-                let groupedItems = generateFilteredItems(for: section)
-                let item = groupedItems[indexPath.row]
-                configureUIFor(item, at: cell)
-            case .three:
-                let groupedItems = generateFilteredItems(for: section)
-                let item = groupedItems[indexPath.row]
-                configureUIFor(item, at: cell)
-            case .four:
-                let groupedItems = generateFilteredItems(for: section)
-                let item = groupedItems[indexPath.row]
-                configureUIFor(item, at: cell)
-        }
+        let groupedItems = generateFilteredItems(for: section)
+        let item = groupedItems[indexPath.row]
 
+        configureUIFor(item, at: cell)
         return cell
     }
 }
